@@ -1,9 +1,9 @@
-# custom_apache/ CHANGELOG
+# custom_apache CHANGELOG
 
-This file is used to list changes made in each version of the custom_apache/ cookbook.
+This file is used to list changes made in each version of the custom_apache cookbook.
 
 ## 0.1.0
-- [your_name] - Initial release of custom_apache/
+- [your_name] - Initial release of custom_apache
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

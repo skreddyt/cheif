@@ -1,4 +1,4 @@
-# custom_apache/ Cookbook
+# custom_apache Cookbook
 
 TODO: Enter the cookbook description here.
 
@@ -20,14 +20,14 @@ e.g.
 
 ### Cookbooks
 
-- `toaster` - custom_apache/ needs toaster to brown your bagel.
+- `toaster` - custom_apache needs toaster to brown your bagel.
 
 ## Attributes
 
 TODO: List your cookbook attributes here.
 
 e.g.
-### custom_apache/::default
+### custom_apache::default
 
 <table>
   <tr>
@@ -37,7 +37,7 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['custom_apache/']['bacon']</tt></td>
+    <td><tt>['custom_apache']['bacon']</tt></td>
     <td>Boolean</td>
     <td>whether to include bacon</td>
     <td><tt>true</tt></td>
@@ -46,18 +46,18 @@ e.g.
 
 ## Usage
 
-### custom_apache/::default
+### custom_apache::default
 
 TODO: Write usage instructions for each cookbook.
 
 e.g.
-Just include `custom_apache/` in your node's `run_list`:
+Just include `custom_apache` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[custom_apache/]"
+    "recipe[custom_apache]"
   ]
 }
 ```

@@ -1,5 +1,5 @@
-#!/bin/bash
-# Cookbook Name:: custom_apache/
+#
+# Cookbook Name:: custom_apache
 # Recipe:: default
 #
 # Copyright 2017, YOUR_COMPANY_NAME
@@ -8,11 +8,11 @@
 #
 package 'httpd' do
 action :install
+end 
+service 'httpd' do 
+action [ :enable, :start ]
 end
-serivce httpd do 
-action [:enable,:start]
-end
-cookbook_file 'var/var/www/html/index'do
+cookbook_file '/var/www/html/index.html' do
 source 'index.html'
 mode 644
 end
