@@ -5,6 +5,7 @@
 # Copyright 2017, YOUR_COMPANY_NAME
 #
 # All rights reserved - Do Not Redistribute
+
 download_url = 'https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.72/bin/apache-tomcat-7.0.72.zip'
 
 group node['tomcat']['group'] do
@@ -26,7 +27,7 @@ dist_dir, _conf_dir = value_for_platform_family(
   ['debian'] => %w( debian default ),
   ['rhel'] => %w( redhat sysconfig )
   )
-  
+end  
   
   template '/etc/init.d/tomcat' do
   source "#{dist_dir}/tomcat-init.erb"
@@ -51,3 +52,4 @@ execute "chkconfig" do
  command " chkconfig tomcat on"
  command " service tomcat start"
  action :run
+end
