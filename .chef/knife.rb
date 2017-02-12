@@ -6,4 +6,4 @@ log_location             STDOUT
 node_name                "skreddyt"
 client_key               "#{current_dir}/skreddyt.pem"
 chef_server_url          "https://api.chef.io/organizations/chefsravan"
-cookbook_path            ["#{current_dir}/../cookbooks"]
+cookbook_path            [ "#{current_dir}/../cookbooks" ]
