@@ -8,26 +8,26 @@
 
 download_url = 'https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.72/bin/apache-tomcat-7.0.72.zip'
 
-group node['tomcat']['group'] do
+group node['tomcat']['group'] 
  
 user node['tomcat']['user'] do
-group node['tomcat']['group']
-system true
-shell '/bin/bash'
+ group node['tomcat']['group']
+ system true
+ shell '/bin/bash'
 end
 
 ark 'tomcat' do
- url 'download_url'
+ url download_url
  home_dir '/opt/tomcat'
  owner node['tomcat']['user']
- group group node['tomcat']['group']
+ group node['tomcat']['group']
 end
 
 dist_dir, _conf_dir = value_for_platform_family(
   ['debian'] => %w( debian default ),
   ['rhel'] => %w( redhat sysconfig )
   )
-end  
+
   
   template '/etc/init.d/tomcat' do
   source "#{dist_dir}/tomcat-init.erb"
